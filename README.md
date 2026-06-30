@@ -189,7 +189,7 @@ Communication time, compute time, and total time are measured separately to isol
 - **Correctness**: `max_error = 0` across all runs — OpenMP and MPI results exactly match the serial baseline.
 - **OpenMP scales well up to the physical core count**, then plateaus — SpMV is fundamentally **memory-bandwidth-bound**, not compute-bound, so adding threads beyond available memory bandwidth yields little benefit.
 - **MPI underperforms on a single machine** for matrices of this size — communication overhead (process startup, data copying over simulated sockets) dominates total runtime, often making MPI slower than the serial baseline. MPI is expected to outperform OpenMP only when the matrix is too large to fit in a single machine's memory and a real multi-node cluster is used.
-- **Cross-platform comparison** (Windows/AMD vs. macOS Apple Silicon M1) shows that scaling behavior is highly architecture-dependent — heterogeneous P/E cores and unified memory bandwidth limits affect OpenMP scaling differently across systems.
+- **Cross-platform comparison** (ubuntu linux with i7 11800h(with 8 cores and 8 threads) vs. macOS Apple Silicon M1(with 8 cores and 8 threads)) shows that scaling behavior is highly architecture-dependent — heterogeneous P/E cores and unified memory bandwidth limits affect OpenMP scaling differently across systems.
 
 ---
 
