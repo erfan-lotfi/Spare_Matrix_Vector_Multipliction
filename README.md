@@ -2,7 +2,7 @@
 
 A C++ implementation and performance analysis of **Sparse Matrix-Vector Multiplication (SpMV)** using the **Compressed Sparse Row (CSR)** format, with serial, **OpenMP** (shared-memory), and **MPI** (distributed-memory) versions.
 
-This project was built for a Parallel Processing course and includes full benchmarking, scaling analysis (Strong/Weak), and cross-platform performance comparison (Windows / macOS Apple Silicon).
+This project was built for a Parallel Processing course and includes full benchmarking, scaling analysis (Strong/Weak), and cross-platform performance comparison.
 
 ---
 
